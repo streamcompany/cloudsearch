@@ -4,15 +4,24 @@
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CloudSearch - Powered By STREAM</title>
-	<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Caviar Dreams:400,700&display=swap" rel="stylesheet"> 
 </head>
 <style>
+@font-face {
+  font-family: Caviar Dreams;
+  src: url(fonts/CaviarDreams.ttf);
+}
+@font-face {
+  font-family: Caviar Dreams;
+  src: url(fonts/CaviarDreams_Bold.ttf);
+  font-weight: bold;
+}
 	html{
 		height: 100%;
 		margin: 0;
 		padding: 0;
-		background-color: #00B9FF;
-		background-image: url("https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/high-clouds.jpg");
+		background-color: #002d6b;
+		background-image: url("images/backg.jpg");
 		background-repeat: no-repeat;
 		background-size: cover
 	}
@@ -59,7 +68,7 @@
 		display: inline-block;
 		box-shadow: 0px 5px 20px grey;
 		border: 0;
-		font-family: 'Rubik', Sans Serif;
+		font-family: 'Caviar Dreams', Sans Serif;
 	}
 			.iv2invert{
 			width: 89%;
@@ -72,7 +81,7 @@
 		display: inline-block;
 		box-shadow: 0px 5px 20px grey;
 		border: 0;
-		font-family: 'Rubik', Sans Serif;
+		font-family: 'Caviar Dreams', Sans Serif;
 				display: none;
 	}
 		.sbutton{
@@ -85,10 +94,22 @@
 		display: inline-block;
 		box-shadow: 0px 5px 20px grey;
 		border: 0;
-		font-family: 'Rubik', Sans Serif;
+		font-family: 'Caviar Dreams', Sans Serif;
 	}
 	</style>
 <body>
+<script type="text/javascript">
+			function cloudsearch(){
+	document.getElementById("1t").innerHTML = "Cloud";
+			document.getElementById("2t").innerHTML = "Search";
+			setTimeout("first()", 5000)
+	}
+	function first(){
+		document.getElementById("1t").innerHTML = "Made by Hari";
+			document.getElementById("2t").innerHTML = "";
+			setTimeout("cloudsearch()", 5000);
+	}
+			</script>
 	<script type="text/javascript">
 		// Prevent variables from being global      
 (function () {
@@ -113,14 +134,17 @@
     
     window.onload = function() {
         div.parentNode.removeChild(div);
+		document.getElementById("1t").innerHTML = "Made by Hari";
+			document.getElementById("2t").innerHTML = "";
+			setTimeout("cloudsearch()", "5000");
     }
     
 })();</script>
 		<div type="render">THIS VERSION HAS BEEN MODIFIED!!! DO NOT USE THIS VERSION OF STREAM</div>
 	<center>
-	<h1 style="font-family: 'Rubik', Sans Serif; font-weight: 700; color: white; font-size: 45px; display: inline-block;">Cloud</h1><h1 style="font-family: 'Rubik', Sans Serif; font-weight: 100; color: white; font-size: 45px; display: inline-block;">Search</h1>
+	<h1 id="1t" style="font-family: 'Caviar Dreams', Sans Serif; font-weight: 700; color: white; font-size: 45px; display: inline-block;">Cloud</h1><h1 id="2t" style="font-family: 'Caviar Dreams', Sans Serif; font-weight: 100; color: white; font-size: 45px; display: inline-block;">Search</h1>
 	</center>
-		<center><input placeholder="Search the web..." id="searchbar" style="border-radius: 10px; border: 0; padding: 10px; width: 89%; font-family: 'Rubik', Sans Serif; display: block; box-shadow: 0px 5px 20px grey;"><script type="text/javascript">
+		<center><input placeholder="Search the web..." id="searchbar" style="border-radius: 10px; border: 0; padding: 10px; width: 89%; font-family: 'Caviar Dreams', Sans Serif; display: block; box-shadow: 0px 5px 20px grey;"><script type="text/javascript">
 	var input = document.getElementById("searchbar");
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
@@ -130,8 +154,10 @@ var input = document.getElementById("searchbar").value;
 }
 });</script></input></center>
 	<center>
-	<H3 style="font-family: 'Rubik', Sans Serif; color: white">Overview</H3>
-	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://forecast.io/embed/#lat=51.50642&lon=-0.12721&name=London&color=#00aaff&font=Rubik&units=uk" frameborder="0"></iframe></div>
+	<H3 style="font-family: 'Caviar Dreams', Sans Serif; color: white">Overview</H3>
+	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="cards/unusual.html" frameborder="0"></iframe></div>
+	<div type="render" style="display: inline-block;">.</div>
+	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://forecast.io/embed/#lat=51.50642&lon=-0.12721&name=London&color=#00aaff&font=Caviar Dreams&units=uk" frameborder="0"></iframe></div>
 	<div type="render" style="display: inline-block;">.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://streamcompany.github.io/projectseis/images/phone.html" frameborder="0"></iframe></div>
 	</center>
 </body>
