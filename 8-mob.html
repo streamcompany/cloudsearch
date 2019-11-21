@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html id="html">
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -109,6 +109,11 @@
 			document.getElementById("2t").innerHTML = "";
 			setTimeout("cloudsearch()", 5000);
 	}
+	function trackdarkness() {
+document.getElementById("1t").setAttribute("style","font-family: 'Caviar Dreams', Sans Serif; font-weight: 700; color: white; font-size: 45px; display: inline-block; filter: blur(" + (window.pageYOffset/10) + "px);");
+document.getElementById("2t").setAttribute("style","font-family: 'Caviar Dreams', Sans Serif; font-weight: 100; color: white; font-size: 45px; display: inline-block; filter: blur(" + (window.pageYOffset/10) + "px);");
+setTimeout("trackdarkness()", 1);
+}
 			</script>
 	<script type="text/javascript">
 		// Prevent variables from being global      
@@ -134,6 +139,7 @@
     
     window.onload = function() {
         div.parentNode.removeChild(div);
+		setTimeout("trackdarkness()", "0");
 		document.getElementById("1t").innerHTML = "Made by Hari";
 			document.getElementById("2t").innerHTML = "";
 			setTimeout("cloudsearch()", "5000");
