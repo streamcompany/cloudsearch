@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>Button Clicker - CloudSearch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Overpass:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+</head>
+<body onload="loadcall()">
+<!-- Load Call -->
+<script type="text/javascript">
+function loadcall(){
+document.getElementById("loading").setAttribute("style", "display: none;")
+}
+</script>
+<!-- Loading UI -->
+<div id="loading" style="width: 100vw; height: 100vh; margin: 0; left: 50%; top: 50%; transform: translate(-50%, -50%); position: fixed; background-color: white;">
+<center>
+<h1 style="font-family: 'Overpass', sans-serif; margin-top: 45vh; font-size: 40px; margin-bottom: 0;">CloudSearch</h1>
+<p style="font-family: 'Overpass', sans-serif; margin-top: 0; padding: 0;">Official stella partner.</p>
+<img src="loading.gif">
+</center>
+</div>
+<!-- Clicker -->
+<center>
+<h1 id="count" style="font-family: 'Roboto Mono', monospace;">0</h1>
+<a href="#" style="text-decoration: none; color: black; text-underline: 0;"><div onclick="addone()" style="font-family: 'Roboto Mono', monospace; width: 60vh; height: 60vh; background-color: #ededed; line-height: 60vh; border-radius: 100%; font-weight: 900; font-size: 100px;">
+<script>
+function addone(){
+document.getElementById("count").innerHTML = parseInt(document.getElementById("count").innerHTML) + 1;
+}
+</script>
++1</div></a>
+</center>
+</body>
+</html>
