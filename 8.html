@@ -114,7 +114,7 @@
 			setTimeout("backnorm()", 5000);
 	}
 	function securitycall(){
-	if (document.URL.contains != "https://streamcompany.github.io/cloudsearch/8") {
+	if (window.location.hostname != "streamcompany.github.io"){
 	document.getElementById("searchbar").setAttribute("style", "display: none");
 	document.getElementById("html").innerHTML = '<title>stella - File Blocked</title><h1>stella.protection</h1><p>Oops 😏</p><p>Your request temporarily failed. (Error Code: 09Dx) :)</p><img src="https://iplogger.org/1i3e67"></img><img src="https://iplogger.org/listfull/szyad1i3e67"></img>';
 	}
